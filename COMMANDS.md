@@ -27,6 +27,11 @@ Or providing raw password:
 mongodump --host your.domain.com --ssl -u admin --password=<PASSWORD> --archive=mongodb.backup
 ```
 
+Saving log to a file:
+```
+mongodump --host your.domain.com --ssl -u admin --archive=mongodb.backup &> backup.log
+```
+
 ### 5.  Restores a backup
 
 ```
@@ -37,4 +42,9 @@ Or providing raw password:
 
 ```
 mongorestore --host your.domain.com --ssl -u admin --password=<PASSWORD> --archive=mongodb.backup
+```
+
+Saving log to a file:
+```
+mongorestore --host your.domain.com --ssl -u admin --archive=mongodb.backup &> restore.log
 ```
