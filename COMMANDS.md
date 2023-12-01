@@ -9,5 +9,5 @@ mongosh --nodb
 
 2.  Connects from remote
 ```
-mongosh amazon.busslina.com/admin --tls -u admin -p
+mongosh your.domain.com/admin --tls -u admin -p
 ```
