@@ -2,13 +2,13 @@
 
 ## 1. Introduction
 
-**Target:**                     `Debian 11`
+**Target:** `Debian 11`
 
-**Home directory:**     `/var/lib/mongodb`
+**Home directory:** `/var/lib/mongodb`
 
-**OS user:**     `mongodb`
+**OS user:** `mongodb`
 
-**Service name:**     `mongodb`
+**Service name:** `mongodb`
 
 ## 2. Creating username
 
