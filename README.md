@@ -2,9 +2,25 @@
 
 ## 1. Introduction
 
+**Target:**                     `Debian 11`
+
+**Home directory:**     `/var/lib/mongodb`
+
+**OS user:**     `mongodb`
+
+**Service name:**     `mongodb`
+
 ## 2. Creating username
 
+```
+useradd --create-home --home-dir /var/lib/mongodb mongodb
+```
+
 ## 3. Creating file structure
+
+-   Config
+-   Database
+-   Logs
 
 ## 4. Download TGZ files
 
