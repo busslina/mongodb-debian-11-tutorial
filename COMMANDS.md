@@ -16,6 +16,7 @@ mongosh your.domain.com/admin --tls -u admin -p
 ```
 
 ### 4.  Creates a backup
+
 ```
 mongodump --host your.domain.com --ssl -u admin --archive=mongodb.backup
 ```
@@ -27,6 +28,7 @@ mongodump --host your.domain.com --ssl -u admin --password=<PASSWORD> --archive=
 ```
 
 ### 5.  Restores a backup
+
 ```
 mongorestore --host your.domain.com --ssl -u admin --archive=mongodb.backup
 ```
@@ -37,3 +39,19 @@ Or providing raw password:
 mongorestore --host your.domain.com --ssl -u admin --password=<PASSWORD> --archive=mongodb.backup
 ```
 
+### 6. Links
+
+-   MongoDB Shell:
+
+https://www.mongodb.com/docs/v4.4/mongo/
+
+
+-   mongoresdump:
+
+https://www.mongodb.com/docs/database-tools/mongodump/
+
+
+-   mongorestore:
+
+
+https://www.mongodb.com/docs/database-tools/mongorestore/
