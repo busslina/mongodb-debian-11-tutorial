@@ -41,7 +41,7 @@ wget https://fastdl.mongodb.org/tools/db/mongodb-database-tools-debian11-x86_64-
 ## 5. Extract files into home directory
 
 ```
-tar xvf mongodb-linux-x86_64-debian11-7.0.4.tgz –directory /var/lib/mongodb
+tar xvf mongodb-linux-x86_64-debian11-7.0.4.tgz -–directory /var/lib/mongodb
 tar xvf mongosh-2.1.0-linux-x64.tgz --directory /var/lib/mongodb
 tar xvf mongodb-database-tools-debian11-x86_64-100.9.3.tgz --directory /var/lib/mongodb
 ```
