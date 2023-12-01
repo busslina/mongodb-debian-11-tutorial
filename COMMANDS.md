@@ -38,20 +38,3 @@ Or providing raw password:
 ```
 mongorestore --host your.domain.com --ssl -u admin --password=<PASSWORD> --archive=mongodb.backup
 ```
-
-### 6. Links
-
--   MongoDB Shell:
-
-https://www.mongodb.com/docs/v4.4/mongo/
-
-
--   mongoresdump:
-
-https://www.mongodb.com/docs/database-tools/mongodump/
-
-
--   mongorestore:
-
-
-https://www.mongodb.com/docs/database-tools/mongorestore/
