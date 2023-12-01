@@ -1,0 +1,15 @@
+[Unit]
+Description=MongoDB Service
+After=network.target
+Wants=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=no
+RestartSec=1
+User=mongodb
+ExecStart=/var/lib/mongodb/mongod --dbpath /var/lib/mongodb/database --config /var/lib/mongodb/config/mongod-tls.conf
+
+[Install]
+WantedBy=multi-user.target
