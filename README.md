@@ -108,11 +108,7 @@ systemctl start mongodb
 /var/lib/mongodb/mongosh --nodb /var/lib/mongodb/config/create-database-admin-user.js
 ```
 
-## 13. Setup config file (TLS mode)
-
-Config file (TLS mode): `/var/lib/mongodb/config/mongod-tls.config`
-
-## 14. Setup keyCert file
+## 13. Setup keyCert file
 
 ```
 cat /etc/letsencrypt/live/xxx/fullchain.pem > /var/lib/mongodb/config/mongodbCertAndKey.pem
@@ -121,7 +117,7 @@ chown mongodb:mongodb /var/lib/mongodb/config/mongodbCertAndKey.pem
 chmod 400 /var/lib/mongodb/config/mongodbCertAndKey.pem
 ```
 
-## 15. Restart service in Production mode
+## 14. Restart service in Production mode
 
 ```
 systemctl stop mongodb 
@@ -133,7 +129,7 @@ systemctl enable /var/lib/mongodb/mongodb.service
 systemctl start mongodb.service
 ```
 
-## 16. Extra
+## 15. Extra
 
 -   Port `27017` must be open. 
 
