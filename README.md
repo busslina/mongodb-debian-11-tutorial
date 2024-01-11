@@ -52,7 +52,14 @@ tar xvf mongodb-database-tools-debian11-x86_64-100.9.3.tgz --directory /var/lib/
 rm -r *.tgz
 ```
 
-## 7. Create symlinks in home directory
+## 7. Clone this repository and copy files
+
+```
+git clone https://github.com/busslina/mongodb-debian-11-tutorial /var/lib/mongodb/tutorial-repo
+cp /var/lib/mongodb/tutorial-repo/files/* /var/lib/mongodb/config
+```
+
+## 8. Create symlinks in home directory
 
 -   `mongod`
 -   `mongosh`
@@ -66,7 +73,7 @@ ln -s mongodb-database-tools-debian11-x86_64-100.9.3/bin/mongodump
 ln -s mongodb-database-tools-debian11-x86_64-100.9.3/bin/mongorestore
 ```
 
-## 8. Setup service files into config directory
+## 9. Setup service files into config directory
 
 -   Cold service file: `/var/lib/mongodb/config/mongodb-cold.service`
 -   Production service file: `/var/lib/mongodb/config/mongodb-production.service`
@@ -76,7 +83,7 @@ chmod 400 /var/lib/mongodb/config/mongodb-cold.service
 chmod 400 /var/lib/mongodb/config/mongodb-production.service
 ```
 
-## 9. Change ownership recursively
+## 10. Change ownership recursively
 
 ```
 chown -R mongodb:mongodb /var/lib/mongodb/*
@@ -84,7 +91,7 @@ chmod g-rwx -R /var/lib/mongodb/*
 chmod o-rwx -R /var/lib/mongodb/*
 ```
 
-## 10. Start service in Cold mode
+## 11. Start service in Cold mode
 
 ```
 cp config/mongodb-cold.service mongodb.service
@@ -92,7 +99,7 @@ systemctl enable /var/lib/mongodb/mongodb.service
 systemctl start mongodb
 ```
 
-## 11. Create database user admin
+## 12. Create database user admin
 
 -   Setup database admin user file: `/var/lib/mongodb/config/create-database-admin-user.js `
 -   Execute script and provide password
@@ -101,11 +108,11 @@ systemctl start mongodb
 /var/lib/mongodb/mongosh --nodb /var/lib/mongodb/config/create-database-admin-user.js
 ```
 
-## 12. Setup config file (TLS mode)
+## 13. Setup config file (TLS mode)
 
 Config file (TLS mode): `/var/lib/mongodb/config/mongod-tls.config`
 
-## 13. Setup keyCert file
+## 14. Setup keyCert file
 
 ```
 cat /etc/letsencrypt/live/xxx/fullchain.pem > /var/lib/mongodb/config/mongodbCertAndKey.pem
@@ -114,7 +121,7 @@ chown mongodb:mongodb /var/lib/mongodb/config/mongodbCertAndKey.pem
 chmod 400 /var/lib/mongodb/config/mongodbCertAndKey.pem
 ```
 
-## 14. Restart service in Production mode
+## 15. Restart service in Production mode
 
 ```
 systemctl stop mongodb 
@@ -126,7 +133,7 @@ systemctl enable /var/lib/mongodb/mongodb.service
 systemctl start mongodb.service
 ```
 
-## 15. Extra
+## 16. Extra
 
 -   Port `27017` must be open. 
 
