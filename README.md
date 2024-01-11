@@ -94,7 +94,7 @@ chmod o-rwx -R /var/lib/mongodb/*
 ## 11. Start service in Cold mode
 
 ```
-cp config/mongodb-cold.service mongodb.service
+cp /var/lib/mongodb/config/mongodb-cold.service /var/lib/mongodb/mongodb.service
 systemctl enable /var/lib/mongodb/mongodb.service
 systemctl start mongodb
 ```
