@@ -111,7 +111,7 @@ Config file (TLS mode): `/var/lib/mongodb/config/mongod-tls.config`
 cat /etc/letsencrypt/live/xxx/fullchain.pem > /var/lib/mongodb/config/mongodbCertAndKey.pem
 cat /etc/letsencrypt/live/xxx/privkey.pem >> /var/lib/mongodb/config/mongodbCertAndKey.pem
 chown mongodb:mongodb /var/lib/mongodb/config/mongodbCertAndKey.pem
-chmod 400 /var/lib mongodb/config/mongodbCertAndKey.pem
+chmod 400 /var/lib/mongodb/config/mongodbCertAndKey.pem
 ```
 
 ## 14. Restart service in Production mode
