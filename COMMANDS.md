@@ -22,7 +22,6 @@ mongodump --host your.domain.com --ssl -u admin --archive=mongodb.backup
 ```
 
 Or providing raw password:
-
 ```
 mongodump --host your.domain.com --ssl -u admin --password=<PASSWORD> --archive=mongodb.backup
 ```
@@ -30,6 +29,11 @@ mongodump --host your.domain.com --ssl -u admin --password=<PASSWORD> --archive=
 Saving log to a file:
 ```
 mongodump --host your.domain.com --ssl -u admin --archive=mongodb.backup &> backup.log
+```
+
+An specific database (it's weird that it's not working with admin user):
+```
+mongodump -d <db_name> --host your.domain.com --ssl -u <db_user> --archive=mongodb.backup
 ```
 
 ### 5.  Restores a backup
