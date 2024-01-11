@@ -52,3 +52,8 @@ Saving log to a file:
 ```
 mongorestore --host your.domain.com --ssl -u admin --archive=mongodb.backup &> restore.log
 ```
+
+An specific database (it's weird that it's not working with admin user):
+```
+mongorestore -d <db_name> --host your.domain.com --ssl -u <db_user> --archive=mongodb.backup
+```
